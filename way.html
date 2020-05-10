@@ -1,0 +1,51 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>蔷薇_帮助系统 - 通道层级</title>
+<link href="help.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.STYLE3 {font-size: 16px; font-weight: bold; }
+.STYLE1 {color: #FF0000;font-weight: bold;}
+-->
+</style>
+</head>
+
+<body style="margin-left:10px;margin-right:10px;">
+<p class="helptitle"><a href="index.html">蔷薇_帮助系统</a> -&gt; 通道层级</p>
+<ul class="index" style="margin-left:10px;padding-left:12px;">
+  <li><a href="#e1">特别说明</a></li>
+  <li><a href="#e2">添加层级</a></li>
+  <li><a href="#e3">备用</a></li>
+</ul>
+<p class="itemstyle1">1、特别说明：&nbsp;&nbsp;&nbsp;&nbsp; <a name="e1" id="e1"></a></p>
+<p  class="itemstyle2">1、提交的订单根据通道层级设置的规则来走对应的接口</p>
+<p  class="itemstyle2">2、通道层级里的添加层级、编辑、备用、删除等功能管理员有完全操作权限，子账户的权限需要在 系统管理->子账户管理 里 操作 <strong>权限</strong> 里去分配权限。</p>
+
+<p class="itemstyle1">2、添加层级：&nbsp;&nbsp; <a name="e2" id="e2"></a></p>
+<p class="itemstyle2"><strong>层级名称：</strong><br />
+层级名称设置自己易分辨易管理名称，方便自己管理层级。 </p>
+
+<p class="itemstyle2"><strong>指定平台：</strong><br />
+可以指定对应的平台，选择通用则表示所有平台的都可以走这个设置的层级</p>
+
+<p class="itemstyle2"><strong>通道类型/接口通道：</strong><br />
+选择对应的通道类型，再设置接口通道。例如：通道类型选择微信，接口通道里也可以设置为快捷，则提交该微信订单可以跳转到指定的快捷通道</p>
+
+<p class="itemstyle2"><strong class="STYLE1">轮询权重：</strong><br />
+轮询权重表示有两个相同通道是，会根据轮询权重来分配通道，权重值越大，分配到的几率越大。例如：一个通道权重值为1，另一个通道权重值为9，则提交10笔订单，会有9笔订单提交权重值为9的通道</p>
+
+<p class="itemstyle2"><strong class="STYLE1">固定金额/区间金额：</strong><br />
+固定金额优先级别较高，如一个通道设置固定金额为50、100，一个通道设置区间金额10-200，那么提交订单为50，则会选择固定金额50的通道。<br/><br/>
+固定金额之间轮询，区间金额之间轮询，固定金额和区间之间不轮询。
+</p>
+
+<p class="itemstyle2"><strong>层级域名：</strong><br />
+绑定层级域名后，会生成一个对应的层级网关地址，通过层级网关地址访问绑定该层级域名下的通道，绑定相同层级域名的通道轮询</p>
+
+<p class="itemstyle1">3、备用：&nbsp;&nbsp; <a name="e3" id="e3"></a></p>
+<p class="itemstyle2">开启层级下备用通道后，选择对应的备用条件，设置备用通道，则提交订单时，订单提交到该层级下，会判断是否满足备用条件，如果满足，就走设置的备用通道。</p>
+</body>
+</html>
